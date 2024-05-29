@@ -1,0 +1,16 @@
+<Envelope >
+    <Header>
+        <lijcommon MsgID="3d1b0586-6c79-4f53-b418-982a0cd2e51c"
+                             Timestamp="Sun Aug 23 00:12:31 CDT 2020" Version="1.0"/>
+    </Header>
+    <Body>
+        <Response>
+            <Country Code="1" Continent="NA" Name="US">
+                <State Code="713" Name="Texas" StateCode="TX"/>
+                <State Code="678" Name="Georgia" StateCode="GA"/>
+                <State Code="480" Name="Arizona" StateCode="AZ"/>
+            </Country>
+            <Demographics Capital="Washington" Currency="Dollar" Language="English"/>
+        </Response>
+    </Body>
+</Envelope>

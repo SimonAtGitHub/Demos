@@ -1,0 +1,18 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:lij="http://www.learninjava.com/soaptoobject/1_0/" >
+    <SOAP-ENV:Header>
+        <lijcommon:LIJHeader xmlns:lijcommon="http://www.learninjava.com/common/1_0"
+                             MsgID="3d1b0586-6c79-4f53-b418-982a0cd2e51c"
+                             Timestamp="Sun Aug 23 00:12:31 CDT 2020" Version="1.0"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <lij:Response>
+            <lij:Country Code="1" Continent="NA" Name="US">
+                <lij:State Code="713" Name="Texas" StateCode="TX"/>
+                <lij:State Code="678" Name="Georgia" StateCode="GA"/>
+                <lij:State Code="480" Name="Arizona" StateCode="AZ"/>
+            </lij:Country>
+            <lij:Demographics Capital="Washington" Currency="Dollar" Language="English"/>
+        </lij:Response>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
