@@ -15,14 +15,14 @@ import javax.xml.bind.annotation.XmlAttribute;
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Demographics {
-    @XmlAttribute()
-    private String Capital;
+    @XmlAttribute(name = "Capital")
+    private String capital;
 
-    @XmlAttribute()
-    private String Currency;
+    @XmlAttribute(name = "Currency")
+    private String currency;
 
-    @XmlAttribute()
-    private String Language;
+    @XmlAttribute(name = "Language")
+    private String language;
 
     // Getters and setters
 }

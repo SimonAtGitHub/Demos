@@ -18,14 +18,14 @@ import java.util.List;
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Country {
-    @XmlAttribute()
-    private String Code;
+    @XmlAttribute(name = "Code")
+    private String code;
 
-    @XmlAttribute()
-    private String Continent;
+    @XmlAttribute(name="Continent")
+    private String continent;
 
-    @XmlAttribute()
-    private String Name;
+    @XmlAttribute(name="Name")
+    private String name;
 
     @XmlElement(name = "State",namespace = Constants.lij)
     private List<State> states;

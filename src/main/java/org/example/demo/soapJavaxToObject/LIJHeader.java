@@ -15,13 +15,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LIJHeader {
-    @XmlAttribute()
+    @XmlAttribute(name="MsgID")
     private String MsgID;
 
-    @XmlAttribute()
+    @XmlAttribute(name="Timestamp")
     private String Timestamp;
 
-    @XmlAttribute()
+    @XmlAttribute(name="Version")
     private String Version;
 
     // Getters and setters

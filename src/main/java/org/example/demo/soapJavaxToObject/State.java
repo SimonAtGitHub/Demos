@@ -16,14 +16,14 @@ import javax.xml.bind.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class State {
 
-    @XmlAttribute(namespace = Constants.lij)
-    private String Code;
+    @XmlAttribute(name="Code")
+    private String code;
 
-    @XmlAttribute(namespace = Constants.lij)
-    private String Name;
+    @XmlAttribute(name="Name")
+    private String name;
 
-    @XmlAttribute(namespace = Constants.lij)
-    private String StateCode;
+    @XmlAttribute(name="StateCode")
+    private String stateCode;
 
     // Getters and setters
 }
