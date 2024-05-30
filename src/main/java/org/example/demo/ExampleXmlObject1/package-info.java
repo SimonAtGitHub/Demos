@@ -5,7 +5,7 @@
                 @XmlNs(prefix = "ms", namespaceURI = "http://www.example2.com")
         }
 )
-package org.example.pojo.MyExampleObject1;
+package org.example.demo.ExampleXmlObject1;
 
 import javax.xml.bind.annotation.XmlNs;
 import javax.xml.bind.annotation.XmlSchema;
