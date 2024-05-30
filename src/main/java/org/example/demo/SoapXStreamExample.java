@@ -25,7 +25,7 @@ public class SoapXStreamExample {
         convertXmlToObject(xmlString);
     }
 
-    public static void convertXmlToObject(String soapXml) {
+    public static SoapEnvelope convertXmlToObject(String soapXml) {
 
         StaxDriver staxDriver = new StaxDriver();
         staxDriver.getInputFactory().setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, true);
@@ -34,6 +34,8 @@ public class SoapXStreamExample {
         xstream.processAnnotations(SoapEnvelope.class);
         SoapEnvelope envelope = (SoapEnvelope) xstream.fromXML(soapXml);
         log.info("envelop:{}",envelope);
+        return envelope;
+
     }
 
     public static String readXmlToString(String path) {
