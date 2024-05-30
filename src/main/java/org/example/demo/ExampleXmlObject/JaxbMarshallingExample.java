@@ -1,4 +1,4 @@
-package org.example.pojo.MyExampleObject;
+package org.example.demo.ExampleXmlObject;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

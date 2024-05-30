@@ -5,7 +5,7 @@
                 @XmlNs(prefix = "ms", namespaceURI = "http://www.registar.com/ScoreVariant")
         }
 )
-package org.example.pojo.MyExampleObject;
+package org.example.demo.ExampleXmlObject;
 
 import javax.xml.bind.annotation.XmlNs;
 import javax.xml.bind.annotation.XmlSchema;

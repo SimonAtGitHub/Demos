@@ -1,4 +1,4 @@
-package org.example.pojo.MyExampleObject;
+package org.example.demo.ExampleXmlObject;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
