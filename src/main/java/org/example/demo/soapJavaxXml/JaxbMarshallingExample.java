@@ -1,31 +1,45 @@
 package org.example.demo.soapJavaxXml;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.demo.ExampleXmlObject1.MyObject;
 import org.example.demo.SoapXStream.SoapXStreamExample;
 import org.example.utils.FileUtils;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.StringReader;
+import java.io.StringWriter;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Slf4j
 public class JaxbMarshallingExample {
     public static void main(String[] args) {
         try {
-            URL resourceUrl = SoapXStreamExample.class.getResource("/soap.xml");
-            String xmlString= FileUtils.readXmlToString(resourceUrl.getPath().substring(1));
 
             // Create a JAXB context and marshaller
             JAXBContext context = JAXBContext.newInstance(SoapEnvelope.class);
-            Unmarshaller unmarshaller = context.createUnmarshaller();
+            Marshaller marshaller = context.createMarshaller();
+            SoapEnvelope envelope = new SoapEnvelope();
+            List<State> states = new ArrayList<>();
+            states.add(new State("1","STATE1","code1"));
+            states.add(new State("2","STATE2","code2"));
+            envelope.setBody(new SoapBody(new Response(new Country("CN","Asia","CHINA",states),new Demographics("Beijing","CHN","Chinese"))));
+            envelope.setHeader(new SoapHeader(new LIJHeader("countrydetails","123432434234","1.2")));
+            // Optionally, you can format the output to be more readable
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
-            SoapEnvelope envelope = (SoapEnvelope) unmarshaller.unmarshal(new StringReader(xmlString));
-            log.info("envelop:{}",envelope);
+            // Marshal the object to XML
+            StringWriter writer = new StringWriter();
+            marshaller.marshal(envelope, writer);
 
+            // Output the XML
+            System.out.println(writer.toString());
         } catch (JAXBException e) {
             e.printStackTrace();
         }
