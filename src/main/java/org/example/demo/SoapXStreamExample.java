@@ -1,9 +1,8 @@
-package org.example;
+package org.example.demo;
 
 
 import com.thoughtworks.xstream.XStream;
 
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -15,9 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.pojo.*;
 
 
-import javax.xml.namespace.QName;
 import javax.xml.stream.XMLInputFactory;
-import java.util.List;
 
 @Slf4j
 public class SoapXStreamExample {

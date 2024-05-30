@@ -1,4 +1,4 @@
-package org.example;
+package org.example.demo;
 
 public class Outer {
     private int outerValue = 10;
