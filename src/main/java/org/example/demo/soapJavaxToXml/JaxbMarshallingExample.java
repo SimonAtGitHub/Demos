@@ -24,7 +24,7 @@ public class JaxbMarshallingExample {
             states.add(new State("1","STATE1","code1"));
             states.add(new State("2","STATE2","code2"));
             envelope.setBody(new SoapBody(new Response(new Country("CN","Asia","CHINA",states),new Demographics("Beijing","CHN","Chinese"))));
-            envelope.setHeader(new SoapHeader(new LIJHeader("countrydetails","123432434234","1.2")));
+            envelope.setHeader(new SoapHeader(new LIJHeader()));
             // Optionally, you can format the output to be more readable
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 

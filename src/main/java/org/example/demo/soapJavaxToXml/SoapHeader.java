@@ -16,6 +16,9 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SoapHeader {
 
+    // This field will not be included in the XML if it's null
+    // @XmlElement(nillable = false)
+
     @XmlElement(namespace = "http://www.learninjava.com/soaptoobject/1_1/",name="LIJHeader")
     private LIJHeader lijHeader;
 
