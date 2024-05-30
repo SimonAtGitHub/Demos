@@ -2,13 +2,15 @@ package org.example;
 
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-import com.thoughtworks.xstream.io.xml.QNameMap;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.IOException;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
-import lombok.Data;
 import org.example.pojo.*;
 
 
@@ -18,26 +20,13 @@ import java.util.List;
 
 public class SoapXStreamExample {
 
+    public static void main(String[] args) throws URISyntaxException {
+        URL resourceUrl = SoapXStreamExample.class.getResource("/soap1.xml");
+        String xmlString= readXmlToString(resourceUrl.getPath().substring(1));
+        convertXmlToObject(xmlString);
+    }
 
-    // Deserialize the SOAP XML to Java object
-    public static final String soapXml = "<Envelope >\n" +
-            "    <Header>\n" +
-            "        <lijcommon MsgID=\"3d1b0586-6c79-4f53-b418-982a0cd2e51c\"\n" +
-            "                             Timestamp=\"Sun Aug 23 00:12:31 CDT 2020\" Version=\"1.0\"/>\n" +
-            "    </Header>\n" +
-            "    <Body>\n" +
-            "        <Response>\n" +
-            "            <Country Code=\"1\" Continent=\"NA\" Name=\"US\">\n" +
-            "                <State Code=\"713\" Name=\"Texas\" StateCode=\"TX\"/>\n" +
-            "                <State Code=\"678\" Name=\"Georgia\" StateCode=\"GA\"/>\n" +
-            "                <State Code=\"480\" Name=\"Arizona\" StateCode=\"AZ\"/>\n" +
-            "            </Country>\n" +
-            "            <Demographics Capital=\"Washington\" Currency=\"Dollar\" Language=\"English\"/>\n" +
-            "        </Response>\n" +
-            "    </Body>\n" +
-            "</Envelope>";
-
-    public static void main(String[] args) {
+    public static void convertXmlToObject(String soapXml) {
 
         StaxDriver staxDriver = new StaxDriver();
         staxDriver.getInputFactory().setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, true);
@@ -59,11 +48,23 @@ public class SoapXStreamExample {
         if (envelope.getBody().getResponse().getCountry() != null) {
             System.out.println("Country Name: " + envelope.getBody().getResponse().getCountry().getName());
         }
-
-        // Serialize the Java object back to SOAP XML
-        String xmlOutput = xstream.toXML(envelope);
-        System.out.println(xmlOutput);
     }
+
+    public static String readXmlToString(String path) {
+        String xmlString = "";
+        try {
+            System.out.println(path);
+            // Read the entire content of the file into a string
+            xmlString = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
+
+            // Output the XML string to the console (optional)
+            System.out.println(xmlString);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return xmlString;
+    }
+
 }
 
 
