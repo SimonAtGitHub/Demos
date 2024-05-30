@@ -1,20 +1,20 @@
-package org.example.pojo;
+package org.example.pojo.soapObject;
 
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import lombok.Data;
 import lombok.ToString;
 
-@Data
 @ToString
-public class Demographics {
+@Data
+public class State {
     @XStreamAsAttribute
-    private String Capital;
+    private String Code;
 
     @XStreamAsAttribute
-    private String Currency;
+    private String Name;
 
     @XStreamAsAttribute
-    private String Language;
+    private String StateCode;
 
     // Getters and setters
 }

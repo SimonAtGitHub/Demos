@@ -1,4 +1,4 @@
-package org.example.pojo;
+package org.example.demo.SoapXStream;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;

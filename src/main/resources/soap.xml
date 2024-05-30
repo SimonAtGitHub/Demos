@@ -1,5 +1,6 @@
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                    xmlns:lij="http://www.learninjava.com/soaptoobject/1_0/"
+                   xmlns:lijcommon="http://www.learninjava.com/soaptoobject/1_1/"
 >
     <SOAP-ENV:Header>
         <lijcommon:LIJHeader xmlns:lijcommon="http://www.learninjava.com/common/1_0"

@@ -1,0 +1,11 @@
+<ts:myObject attribute1="attr123" xmlns:ms="http://www.example2.com" xmlns:ts="http://www.example1.com">
+    <Items id="1">
+        <ms:name>item1</ms:name>
+        <ms:Weight>10kg</ms:Weight>
+    </Items>
+    <Items id="2">
+        <ms:name>item2</ms:name>
+        <ms:Weight>20kg</ms:Weight>
+    </Items>
+    <ts:test>test</ts:test>
+</ts:myObject>

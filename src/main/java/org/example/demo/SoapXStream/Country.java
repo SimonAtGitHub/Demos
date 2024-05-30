@@ -1,4 +1,4 @@
-package org.example.pojo;
+package org.example.demo.SoapXStream;
 
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;

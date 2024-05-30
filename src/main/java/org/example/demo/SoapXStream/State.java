@@ -1,20 +1,20 @@
-package org.example.pojo;
+package org.example.demo.SoapXStream;
 
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import lombok.Data;
 import lombok.ToString;
 
-@Data
 @ToString
-public class LIJHeader {
+@Data
+public class State {
     @XStreamAsAttribute
-    private String MsgID;
+    private String Code;
 
     @XStreamAsAttribute
-    private String Timestamp;
+    private String Name;
 
     @XStreamAsAttribute
-    private String Version;
+    private String StateCode;
 
     // Getters and setters
 }
