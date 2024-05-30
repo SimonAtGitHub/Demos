@@ -1,9 +1,8 @@
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                    xmlns:lij="http://www.learninjava.com/soaptoobject/1_0/"
-                   xmlns:lijcommon="http://www.learninjava.com/soaptoobject/1_1/"
 >
     <SOAP-ENV:Header>
-        <lijcommon:LIJHeader xmlns:lijcommon="http://www.learninjava.com/common/1_0"
+        <lijcommon:LIJHeader xmlns:lijcommon="http://www.learninjava.com/soaptoobject/1_1/"
                              MsgID="3d1b0586-6c79-4f53-b418-982a0cd2e51c"
                              Timestamp="Sun Aug 23 00:12:31 CDT 2020" Version="1.0"/>
     </SOAP-ENV:Header>
