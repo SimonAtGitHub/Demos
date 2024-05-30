@@ -1,6 +1,5 @@
-package org.example.pojo.soapObject1;
+package org.example.demo.soapJavaxXml;
 
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

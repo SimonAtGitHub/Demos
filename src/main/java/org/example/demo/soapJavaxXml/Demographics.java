@@ -1,6 +1,5 @@
-package org.example.pojo.soapObject1;
+package org.example.demo.soapJavaxXml;
 
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,15 +14,15 @@ import javax.xml.bind.annotation.XmlAttribute;
 @ToString
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-public class LIJHeader {
+public class Demographics {
     @XmlAttribute()
-    private String MsgID;
+    private String Capital;
 
     @XmlAttribute()
-    private String Timestamp;
+    private String Currency;
 
     @XmlAttribute()
-    private String Version;
+    private String Language;
 
     // Getters and setters
 }

@@ -1,6 +1,5 @@
-package org.example.pojo.soapObject1;
+package org.example.demo.soapJavaxXml;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +14,12 @@ import javax.xml.bind.annotation.XmlElement;
 @ToString
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SoapBody {
+public class Response {
+    @XmlElement(namespace = "http://www.learninjava.com/soaptoobject/1_0/",name="Country")
+    private Country country;
 
-    @XmlElement(namespace = "http://www.learninjava.com/soaptoobject/1_0/",name="Response")
-    private Response response;
+    @XmlElement(namespace = "http://www.learninjava.com/soaptoobject/1_0/",name="Demographics")
+    private Demographics demographics;
 
     // Getters and setters
 }

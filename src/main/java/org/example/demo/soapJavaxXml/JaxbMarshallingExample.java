@@ -1,4 +1,4 @@
-package org.example.pojo.soapObject1;
+package org.example.demo.soapJavaxXml;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.demo.SoapXStream.SoapXStreamExample;

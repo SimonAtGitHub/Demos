@@ -6,7 +6,7 @@
                 @XmlNs(prefix = "lijcommon", namespaceURI = "http://www.learninjava.com/soaptoobject/1_1/")
         }
 )
-package org.example.pojo.soapObject1;
+package org.example.demo.soapJavaxXml;
 
 import javax.xml.bind.annotation.XmlNs;
 import javax.xml.bind.annotation.XmlSchema;
