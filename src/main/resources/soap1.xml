@@ -1,6 +1,6 @@
 <Envelope >
     <Header>
-        <lijcommon MsgID="3d1b0586-6c79-4f53-b418-982a0cd2e51c"
+        <LIJHeader MsgID="3d1b0586-6c79-4f53-b418-982a0cd2e51c"
                              Timestamp="Sun Aug 23 00:12:31 CDT 2020" Version="1.0"/>
     </Header>
     <Body>

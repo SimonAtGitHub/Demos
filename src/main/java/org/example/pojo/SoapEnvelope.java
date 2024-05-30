@@ -2,7 +2,9 @@ package org.example.pojo;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;
+import lombok.ToString;
 
+@ToString
 @Data
 @XStreamAlias("Envelope")
 public class SoapEnvelope {

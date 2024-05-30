@@ -3,9 +3,11 @@ package org.example.pojo;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
+@ToString
 @Data
 public class Country {
     @XStreamAsAttribute

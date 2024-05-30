@@ -1,16 +1,16 @@
 package org.example.pojo;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import lombok.Data;
-import org.example.pojo.*;
+import lombok.ToString;
 
+@ToString
 @Data
 @XStreamAlias("Header")
 public class SoapHeader {
 
-    @XStreamAlias("lijcommon")
-    private LIJCommon lijHeader;
+    @XStreamAlias("LIJHeader")
+    private LIJHeader lijHeader;
 
     // Getters and setters
 }

@@ -1,8 +1,12 @@
 package org.example.pojo;
 
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import lombok.Data;
+import lombok.ToString;
 
-public class LIJCommon {
+@Data
+@ToString
+public class LIJHeader {
     @XStreamAsAttribute
     private String MsgID;
 

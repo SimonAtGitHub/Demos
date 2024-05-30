@@ -21,7 +21,7 @@ import java.util.List;
 public class SoapXStreamExample {
 
     public static void main(String[] args) throws URISyntaxException {
-        URL resourceUrl = SoapXStreamExample.class.getResource("/soap1.xml");
+        URL resourceUrl = SoapXStreamExample.class.getResource("/soap.xml");
         String xmlString= readXmlToString(resourceUrl.getPath().substring(1));
         convertXmlToObject(xmlString);
     }
@@ -42,6 +42,7 @@ public class SoapXStreamExample {
 //        xstream.processAnnotations(State.class);
 
         SoapEnvelope envelope = (SoapEnvelope) xstream.fromXML(soapXml);
+        System.out.println(envelope);
 
         // Now you can work with the deserialized object
         // For example, print the country name
