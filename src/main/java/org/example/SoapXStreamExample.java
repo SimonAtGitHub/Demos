@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
+import lombok.extern.slf4j.Slf4j;
 import org.example.pojo.*;
 
 
@@ -18,6 +19,7 @@ import javax.xml.namespace.QName;
 import javax.xml.stream.XMLInputFactory;
 import java.util.List;
 
+@Slf4j
 public class SoapXStreamExample {
 
     public static void main(String[] args) throws URISyntaxException {
@@ -33,33 +35,18 @@ public class SoapXStreamExample {
         XStream xstream = new XStream(staxDriver);
 
         xstream.processAnnotations(SoapEnvelope.class);
-//        xstream.processAnnotations(SoapHeader.class);
-//        xstream.processAnnotations(LIJCommon.class);
-//        xstream.processAnnotations(SoapBody.class);
-//        xstream.processAnnotations(Response.class);
-//        xstream.processAnnotations(Demographics.class);
-//        xstream.processAnnotations(Country.class);
-//        xstream.processAnnotations(State.class);
-
         SoapEnvelope envelope = (SoapEnvelope) xstream.fromXML(soapXml);
-        System.out.println(envelope);
-
-        // Now you can work with the deserialized object
-        // For example, print the country name
-        if (envelope.getBody().getResponse().getCountry() != null) {
-            System.out.println("Country Name: " + envelope.getBody().getResponse().getCountry().getName());
-        }
+        log.info("envelop:{}",envelope);
     }
 
     public static String readXmlToString(String path) {
         String xmlString = "";
         try {
-            System.out.println(path);
             // Read the entire content of the file into a string
             xmlString = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
 
             // Output the XML string to the console (optional)
-            System.out.println(xmlString);
+            log.info(xmlString);
         } catch (IOException e) {
             e.printStackTrace();
         }
