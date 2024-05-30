@@ -1,4 +1,4 @@
-package org.example.demo.soapJavaxXml;
+package org.example.demo.soapJavaxToXml;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,23 +7,17 @@ import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlElement;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-public class LIJHeader {
-    @XmlAttribute()
-    private String MsgID;
+public class SoapBody {
 
-    @XmlAttribute()
-    private String Timestamp;
-
-    @XmlAttribute()
-    private String Version;
+    @XmlElement(namespace = "http://www.learninjava.com/soaptoobject/1_0/",name="Response")
+    private Response response;
 
     // Getters and setters
 }

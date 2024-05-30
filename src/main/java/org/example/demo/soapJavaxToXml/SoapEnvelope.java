@@ -1,4 +1,4 @@
-package org.example.demo.soapJavaxXml;
+package org.example.demo.soapJavaxToXml;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

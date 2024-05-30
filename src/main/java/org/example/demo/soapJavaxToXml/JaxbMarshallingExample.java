@@ -1,18 +1,12 @@
-package org.example.demo.soapJavaxXml;
+package org.example.demo.soapJavaxToXml;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.demo.ExampleXmlObject1.MyObject;
-import org.example.demo.SoapXStream.SoapXStreamExample;
-import org.example.utils.FileUtils;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import java.io.StringReader;
 import java.io.StringWriter;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 

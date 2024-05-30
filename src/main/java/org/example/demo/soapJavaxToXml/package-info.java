@@ -6,8 +6,7 @@
                 @XmlNs(prefix = "lijcommon", namespaceURI = "http://www.learninjava.com/soaptoobject/1_1/")
         }
 )
-package org.example.demo.soapJavaxXml;
+package org.example.demo.soapJavaxToXml;
 
 import javax.xml.bind.annotation.XmlNs;
 import javax.xml.bind.annotation.XmlSchema;
-import javax.xml.bind.annotation.XmlSchemaType;
