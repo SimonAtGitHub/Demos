@@ -16,13 +16,13 @@ public class JaxbMarshallingExample {
     public static void main(String[] args) {
         try {
 
-            // Create a JAXB context and marshaller
+            // Create a JAXB context and marshalle
             JAXBContext context = JAXBContext.newInstance(SoapEnvelope.class);
             Marshaller marshaller = context.createMarshaller();
             SoapEnvelope envelope = new SoapEnvelope();
             List<State> states = new ArrayList<>();
-            states.add(new State("1","STATE1","code1"));
-            states.add(new State("2","STATE2","code2"));
+            states.add(new State("1","STATE1","code1","v1"));
+            states.add(new State("2","STATE2","code2","v2"));
             envelope.setBody(new SoapBody(new Response(new Country("CN","Asia","CHINA",states),new Demographics("Beijing","CHN","Chinese"))));
             envelope.setHeader(new SoapHeader(new LIJHeader()));
             // Optionally, you can format the output to be more readable
